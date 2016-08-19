@@ -1,5 +1,5 @@
 ##SDK Version : ESP8266_RTOS_SDK_V1.4.2_16_07_04
-##Platform : ESP-LAUNCHER BAOARD
+##Platform : ESP-LAUNCHER BOARD
 
 ##Operation Steps:
 
