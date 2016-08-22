@@ -14,7 +14,7 @@
 		export SDK_PATH="/home/esp8266/Share/ESP8266_RTOS_SDK"
 		export BIN_PATH="/home/esp8266/Share/ESP8266_RTOS_SDK/bin"
 	   
-4. Enter example folder, run ./gen_misc.sh, and follow below steps to fininsh the sample code compile:
+4. Enter example folder, run ./gen_misc.sh, and follow below steps to finish the sample code compile:
 	
 		Option 1 will be automatically selected, 
 		Option 2 > Enter 1. 
