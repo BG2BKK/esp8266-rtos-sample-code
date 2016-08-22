@@ -13,7 +13,7 @@
 
 	If you want to test the openSSL client demo: You should not use the defination "#define DEMO_CLIENT" int the file "ESP8266_RTOS_SDK\openssl_demo\programs\openssl_demo.c".
 	   
-3. Enter example folder, run ./gen_misc.sh, and follow below steps to fininsh the sample code compile:
+3. Enter example folder, run ./gen_misc.sh, and follow below steps to finish the sample code compile:
 	
 		Option confirm SDK PATH > Enter y
 		Option 1 will be automatically selected,
