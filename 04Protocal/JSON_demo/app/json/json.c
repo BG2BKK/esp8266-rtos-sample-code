@@ -182,7 +182,8 @@ int json_main (void) {
 }
 LOCAL void json_task(void *pvParameters)
 {	
-	json_main();
+	create_objects();
+//	json_main();
 	while (1) {
 		
 		vTaskDelay(200 / portTICK_RATE_MS);

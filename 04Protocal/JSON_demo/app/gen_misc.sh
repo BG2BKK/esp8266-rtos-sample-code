@@ -8,8 +8,11 @@ export SDK_PATH=~/esp_iot_sdk_freertos
 export BIN_PATH=~/esp8266_bin
 !
 
-export SDK_PATH=/home/esp8266/Share/new/ESP8266_RTOS_SDK_V1.4.0
-export BIN_PATH=/home/esp8266/Share/new/ESP8266_RTOS_SDK_V1.4.0/bin
+# export SDK_PATH=/home/esp8266/Share/new/ESP8266_RTOS_SDK_V1.4.0
+# export BIN_PATH=/home/esp8266/Share/new/ESP8266_RTOS_SDK_V1.4.0/bin
+export SDK_PATH=/home/huang/workspace/nodemcu/esp8266_exp/esp8266_rtos_sdk
+export BIN_PATH=/home/huang/workspace/nodemcu/esp8266_exp/esp8266_rtos_sdk/bin
+
 
 echo "gen_misc.sh version 20150911"
 echo ""

@@ -23,7 +23,8 @@ GEN_BINS= eagle.app.v6.bin
 SPECIAL_MKTARGETS=$(APP_MKTARGETS)
 SUBDIRS=    \
 	user    \
-	json
+	json	\
+	driver
 
 endif # } PDIR
 
@@ -47,7 +48,8 @@ endif
 
 COMPONENTS_eagle.app.v6 = \
 	user/libuser.a  \
-	json/libcjson.a
+	json/libcjson.a	\
+	driver/libdriver.a
 
 LINKFLAGS_eagle.app.v6 =    \
     -L$(SDK_PATH)/lib       \
@@ -117,7 +119,7 @@ DDEFINES +=				\
 # Required for each makefile to inherit from the parent
 #
 
-INCLUDES := $(INCLUDES) -I $(PDIR)include
+INCLUDES := $(INCLUDES) -I $(PDIR)include -I $(PDIR)include/driver
 sinclude $(SDK_PATH)/Makefile
 
 .PHONY: FORCE

@@ -23,6 +23,7 @@
  */
 
 #include "esp_common.h"
+#include "uart.h"
 
 /******************************************************************************
  * FunctionName : user_init
@@ -32,6 +33,7 @@
 *******************************************************************************/
 void user_init(void)
 {
+	UART_SetBaudrate(UART0, BIT_RATE_115200);
     os_printf("SDK version:%s\n", system_get_sdk_version());
     wifi_set_opmode(STATION_MODE);
     json_start();

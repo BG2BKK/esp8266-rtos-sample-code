@@ -24,6 +24,7 @@
 
 #include "esp_common.h"
 
+#include "uart.h"
 
 /******************************************************************************
  * FunctionName : user_rf_cal_sector_set
@@ -77,7 +78,6 @@ void TCP_Server_Test()
 	vTaskDelay(1000);
 	TcpLocalServer();
 	
-
 }
 
 /******************************************************************************
@@ -88,6 +88,7 @@ void TCP_Server_Test()
 *******************************************************************************/
 void user_init(void)
 {      
+	UART_SetBaudrate(UART0, BIT_RATE_115200);
 	printf("test new compile..\n");
 	printf("Please get the RTOS version of SDK.%s\n", system_get_sdk_version());
     xTaskCreate(TCP_Server_Test,"TCP_Server_Test",500,NULL,6,NULL);

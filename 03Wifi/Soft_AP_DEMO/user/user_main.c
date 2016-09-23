@@ -24,6 +24,7 @@
 
 #include "esp_common.h"
 
+#include "uart.h"
 
 /******************************************************************************
  * FunctionName : user_rf_cal_sector_set
@@ -84,6 +85,7 @@ void soft_AP_Test()
 *******************************************************************************/
 void user_init(void)
 {      
+	UART_SetBaudrate(UART0, BIT_RATE_115200);
 	printf("test new compile..\n");
     xTaskCreate(soft_AP_Test,"conn_AP_test",500,NULL,6,NULL);
 }

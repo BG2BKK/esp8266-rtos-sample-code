@@ -9,8 +9,8 @@
 
 
 
-#define DEMO_AP_SSID      "WT_TEST"
-#define DEMO_AP_PASSWORD "1234567abc"     
+#define DEMO_AP_SSID      "TP-LINK_A0E338"
+#define DEMO_AP_PASSWORD "huanghuang"     
 
 #define SOFT_AP_SSID "DEMO_AP"
 #define SOFT_AP_PASSWORD "12345678"
@@ -343,16 +343,10 @@ void udpClient(void*arg)
 
 }
 
-
-
-
-
 void WifiConfig(void* arg)
 {
 	StaConectApConfig(DEMO_AP_SSID,DEMO_AP_PASSWORD);
     vTaskDelete(NULL);
 }
-
-
 
 

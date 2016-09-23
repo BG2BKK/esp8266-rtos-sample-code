@@ -48,7 +48,7 @@ endif
 
 COMPONENTS_eagle.app.v6 = \
 	user/libuser.a  \
-	soft_ap/libconnap.a
+	soft_ap/libsoftap.a
 
 LINKFLAGS_eagle.app.v6 = \
 	-L$(SDK_PATH)/lib        \

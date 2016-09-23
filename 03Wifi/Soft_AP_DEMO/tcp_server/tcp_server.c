@@ -343,10 +343,6 @@ void udpClient(void*arg)
 
 }
 
-
-
-
-
 void WifiConfig(void* arg)
 {
 	StaConectApConfig(DEMO_AP_SSID,DEMO_AP_PASSWORD);

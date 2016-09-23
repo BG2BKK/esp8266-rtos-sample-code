@@ -94,6 +94,7 @@ void user_init(void)
 {
 	printf("THIS IS A UART LOOPBACK DEMO...\n");
 	uart_init_new();    //UART0 Initialize
+	UART_SetBaudrate(UART0, BIT_RATE_115200);
    
     while(1){
         uint8 alpha= 'A';
@@ -102,6 +103,5 @@ void user_init(void)
         uart0_tx_buffer(test_str, strlen(test_str));
         break;
     }
-
 }
 

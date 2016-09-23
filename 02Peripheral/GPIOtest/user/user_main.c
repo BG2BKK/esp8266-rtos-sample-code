@@ -23,6 +23,7 @@
  */
 
 #include "esp_common.h"
+#include "uart.h"
 #include "gpio.h"
 
 
@@ -103,6 +104,7 @@ void io_intr_handler(void)
 		}
 	}
 
+//	printf("TEST TOGGLE ON GPIO15,YOU WILL SEE THE LED BLINKING ON IO15\n");
 	//should not add print in interruption, except that we want to debug something
     //printf("in io intr: 0X%08x\r\n",status);                    //WRITE ON SERIAL UART0
 	GPIO_REG_WRITE(GPIO_STATUS_W1TC_ADDRESS,status);       //CLEAR THE STATUS IN THE W1 INTERRUPT REGISTER
@@ -117,6 +119,7 @@ void io_intr_handler(void)
 *******************************************************************************/
 void user_init(void)
 {      
+//	UART_SetBaudrate(UART0, BIT_RATE_115200);
 	printf("TEST TOGGLE ON GPIO15,YOU WILL SEE THE LED BLINKING ON IO15\n");
 	GPIO_ConfigTypeDef io_out_conf;
 	io_out_conf.GPIO_IntrType = GPIO_PIN_INTR_DISABLE;

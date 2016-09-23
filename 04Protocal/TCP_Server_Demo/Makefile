@@ -48,7 +48,8 @@ endif
 
 COMPONENTS_eagle.app.v6 = \
 	user/libuser.a  \
-	tcp_server/libtcpserver.a
+	tcp_server/libtcpserver.a\
+	driver/libdriver.a
 
 LINKFLAGS_eagle.app.v6 = \
 	-L$(SDK_PATH)/lib        \
@@ -125,7 +126,7 @@ DDEFINES +=				\
 # Required for each makefile to inherit from the parent
 #
 
-INCLUDES := $(INCLUDES) -I $(PDIR)include
+INCLUDES := $(INCLUDES) -I $(PDIR)include -I $(PDIR)include/driver
 sinclude $(SDK_PATH)/Makefile
 
 .PHONY: FORCE

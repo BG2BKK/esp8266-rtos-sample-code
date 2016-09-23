@@ -25,12 +25,16 @@
 #ifndef __MULTICAST_CONFIG_H__
 #define __MULTICAST_CONFIG_H__
 
-#define DEMO_WIFI_SSID     "UTT-750"
-#define DEMO_WIFI_PASSWORD  "espressif"
+// #define DEMO_WIFI_SSID     "UTT-750"
+// #define DEMO_WIFI_PASSWORD  "espressif"
+
+#define DEMO_WIFI_SSID     "TP-LINK_A0E338"
+#define DEMO_WIFI_PASSWORD  "huanghuang"
+
 #define MSGBUFSIZE          1024
 
 #define HELLO_PORT 1887                //multicast port
-#define HELLO_GROUP "239.0.18.87"      //multicast ip
+#define HELLO_GROUP "192.168.1.101"      //multicast ip
 
 #define SEND_MODE      1              //1: enable send task.0:disable send task
 #define RECV_MODE      1              //1: enable recv task,0:disable recv task

@@ -30,6 +30,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "multicast_config.h"
+#include "uart.h"
 
 /******************************************************************************
  * FunctionName : igmp_send_task
@@ -97,6 +98,7 @@ void igmp_recv_task(void *pvParameters)
         vTaskDelete(NULL);
     }
 
+	printf("before setsockopt\n");
     mreq.imr_multiaddr.s_addr=inet_addr(HELLO_GROUP);
     mreq.imr_interface.s_addr=htonl(INADDR_ANY);
     if (setsockopt(fd,IPPROTO_IP,IP_ADD_MEMBERSHIP,&mreq,sizeof(mreq)) < 0)
@@ -104,6 +106,7 @@ void igmp_recv_task(void *pvParameters)
         printf("setsockopt failed\n");
         vTaskDelete(NULL);
     }
+	printf("after setsockopt\n");
 
     while (1)
     {
@@ -225,6 +228,8 @@ uint32 user_rf_cal_sector_set(void)
 *******************************************************************************/
 void user_init(void)
 {
+
+	UART_SetBaudrate(UART0, 115200);
     printf("SDK version:%s\n", system_get_sdk_version());
 
     wifi_set_event_handler_cb(wifi_event_handler_cb);

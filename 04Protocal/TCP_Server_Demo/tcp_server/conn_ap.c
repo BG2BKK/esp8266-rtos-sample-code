@@ -36,20 +36,18 @@
 
 
 
-
-#define DEMO_AP_SSID      "WT_TEST"
-#define DEMO_AP_PASSWORD "1234567abc"     
+#define DEMO_AP_SSID      "TP-LINK_A0E338"
+#define DEMO_AP_PASSWORD "huanghuang"
+// 
+// #define DEMO_AP_SSID      "WT_TEST"
+// #define DEMO_AP_PASSWORD "1234567abc"     
 
 #define SOFT_AP_SSID "DEMO_AP"
 #define SOFT_AP_PASSWORD "12345678"
 
-
-
-
-
 void wifi_handle_event_cb(System_Event_t *evt)
 {
-    printf("event %x\n", evt->event_id);
+//    printf("event %x\n", evt->event_id);
     
     switch (evt->event_id) {
          case EVENT_STAMODE_CONNECTED:
